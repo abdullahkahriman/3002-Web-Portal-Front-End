@@ -9,3 +9,7 @@ Tema: http://1renk.com/portfolio_mod/3002-web-portal/
 
 # Online Demo
 http://akcasoft.com/demo/test/
+http://www.akcasoft.com/demo/test/detay.html
+http://www.akcasoft.com/demo/test/uye.html
+http://www.akcasoft.com/demo/test/video_detay.html
+http://www.akcasoft.com/demo/test/kategori.html
