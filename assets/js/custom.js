@@ -1,3 +1,8 @@
+/*
+	Abdullah Kahriman
+	29.03.2016
+*/
+
 $(function () {
 
     var _3002Portal = {};
