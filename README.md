@@ -1,20 +1,15 @@
 # Demo
-http://akcasoft.com/demo/test/
-
-http://www.akcasoft.com/demo/test/detay.html
-
-http://www.akcasoft.com/demo/test/uye.html
-
-http://www.akcasoft.com/demo/test/video_detay.html
-
-http://www.akcasoft.com/demo/test/kategori.html
+En kısa sürede demo eklenecek.
 
 # Hakkında
 İnternet üzerinden ücretsiz olarak edindiğim PSD tasarımın arayüz kodlamasını yaptım. Eksik alanlar mevcut. :/
 
 Tema: http://1renk.com/portfolio_mod/3002-web-portal/
 
-# Eksik Kısımlar:
-  - Emlak İlanları Vitrini
+# Edit:
+  - Emlak İlanları Vitrini Düzeltildi (js aktifleştirildi)
+  - Oyunlar kısmı Düzeltildi (js aktifleştirildi)
+  - Sayfayı rahat gezebilmek adına linkler eklendi
+
+# Eksik Kısım(lar):
   - Nereyi Görmeli (Tab Gezme)
-  - Oyunlar
