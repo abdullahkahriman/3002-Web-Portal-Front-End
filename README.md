@@ -1,5 +1,5 @@
-# Demo
-En kısa sürede demo eklenecek.
+# Demo (gif)
+![alt tag](http://mkerala.com/di/ATB6/animation.gif)
 
 # Hakkında
 İnternet üzerinden ücretsiz olarak edindiğim PSD tasarımın arayüz kodlamasını yaptım. Eksik alanlar mevcut. :/
