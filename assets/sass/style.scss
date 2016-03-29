@@ -9,6 +9,32 @@
 
 $beyaz: #ffffff;
 
+//fixed
+.fixed {
+    width: 300px;
+    background: #63b3ad;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    z-index: 99999;
+    font: 14px 'Arial';
+    h3 {
+        color: $beyaz;
+        padding: 5px 10px;
+        border-bottom: 1px solid #ddd;
+    }
+    ul {
+        li {
+            display: block;
+            padding: 5px 10px;
+            a {
+                color: $beyaz;
+                display: block;
+            }
+        }
+    }
+}
+
 //logo
 .logo {
   width: 187px;
@@ -1760,15 +1786,11 @@ $beyaz: #ffffff;
       padding: 25px;
       overflow: hidden;
       ul {
-        white-space: nowrap;
         overflow: hidden;
         li {
-          overflow: hidden;
-          width: 131px;
-          margin-right: 31px;
-          display: inline-block;
-          position: relative;
-          //float: left;
+            overflow: hidden;
+            width: 166px;
+            float: left;
           a {
             position: relative;
             > strong {
@@ -2407,13 +2429,13 @@ $beyaz: #ffffff;
         padding: 28px;
         overflow: hidden;
         ul {
-          //height: 234px;
           overflow: hidden;
           li {
-            width: 78px;
-            display: inline-block;
-            margin-right: 23px;
-            margin-bottom: 36px;
+            height: 122px;
+            float: left;
+            margin-right: 29px;
+            word-wrap: break-word;
+            overflow: hidden;
             a {
               display: block;
               img {
