@@ -2,7 +2,7 @@
 ![alt tag](http://mkerala.com/di/ATB6/animation.gif)
 
 # Hakkında
-İnternet üzerinden ücretsiz olarak edindiğim PSD tasarımın arayüz kodlamasını yaptım. Eksik alanlar mevcut. :/
+İnternet üzerinden ücretsiz olarak edindiğim PSD tasarımın arayüz kodlamasını yaptım.
 
 Tema: http://1renk.com/portfolio_mod/3002-web-portal/
 
