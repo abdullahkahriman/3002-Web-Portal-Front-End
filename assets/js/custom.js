@@ -19,14 +19,15 @@ $(function () {
         _3002Portal.yorum(); //yorum
         _3002Portal.uye(); //giriş yap - kayıt ol
         _3002Portal.oyunlar(); //oyunlar
+        _3002Portal.topList(); //tab top listesi
     };
 
     //tab haber
     _3002Portal.tabHaber = function () {
 
-        var haberMenu   = $('.tabHaberMenu'),
+        var haberMenu = $('.tabHaberMenu'),
             haberIcerik = $('.tabHaberIcerik'),
-            haberAlt    = $('.tabHaberAlt');
+            haberAlt = $('.tabHaberAlt');
 
         haberMenu.find('li').removeClass('aktif');
         haberMenu
@@ -81,10 +82,10 @@ $(function () {
     //vip firmalar
     _3002Portal.vipFirmalar = function () {
 
-        var vipLi       = $('.firma-listele li').length,
-            vipWidth    = 158,
-            vipToplam   = vipLi * vipWidth,
-            vipDeger    = 0;
+        var vipLi = $('.firma-listele li').length,
+            vipWidth = 158,
+            vipToplam = vipLi * vipWidth,
+            vipDeger = 0;
 
         $('ul.firma-listele').css('width', vipToplam + 'px');
 
@@ -122,7 +123,7 @@ $(function () {
 
         var tabSinemaBaslik = $('.tabSinemaBaslik'),
             tabSinemaIcerik = $('.tabSinemaIcerik'),
-            tabSinemaAlt    = $('.tabSinemaAlt');
+            tabSinemaAlt = $('.tabSinemaAlt');
 
         tabSinemaBaslik.find('li').removeClass('aktif');
         tabSinemaBaslik.find('li').filter(':first').addClass('aktif');
@@ -175,54 +176,55 @@ $(function () {
 
         var tabEtkinlikBaslik = $('.tabEtkinlikBaslik'),
             tabEtkinlikIcerik = $('.tabEtkinlikIcerik'),
-            tabEtkinlikAlt    = $('.tabEtkinlikAlt');
+            tabEtkinlikAlt = $('.tabEtkinlikAlt');
 
-        tabEtkinlikBaslik.find('li').removeClass('aktif');
         tabEtkinlikBaslik.find('ul li').filter(':first').addClass('aktif');
-        tabEtkinlikIcerik.hide();
-        tabEtkinlikIcerik.filter(':first').show();
+        tabEtkinlikIcerik.find('ul li').hide();
+        tabEtkinlikIcerik.find('ul li').filter('.tab_konser').show();
 
-        tabEtkinlikBaslik.find('li').each(function () {
-            var tip = $(this).attr("datatype");
+        tabEtkinlikBaslik.find('ul li').each(function () {
+            var tip = $(this).attr('datatype');
             tabEtkinlikAlt.find('ul').append('<li datatype="' + tip + '"><a href="#"></a></li>');
             tabEtkinlikAlt.find('ul li').filter(':first').addClass('aktif');
         });
 
-        tabEtkinlikBaslik.find('li').on('click', function () {
+        tabEtkinlikBaslik.find('ul li').on('click', function () {
             if (!$(this).hasClass('aktif')) {
                 var tip = $(this).attr('datatype'),
-                    index = $(this).index();
-                tabEtkinlikBaslik.find('li').removeClass('aktif');
+                    indis = $(this).index();
+
+                tabEtkinlikBaslik.find('ul li').removeClass('aktif');
                 $(this).addClass('aktif');
-                tabEtkinlikAlt.find('li').removeClass('aktif').eq(index).addClass('aktif');
-                tabEtkinlikIcerik.hide();
-                $("." + tip).fadeIn();
+                tabEtkinlikAlt.find('ul li').removeClass('aktif');
+                tabEtkinlikAlt.find('ul li').eq(indis).addClass('aktif');
+                tabEtkinlikIcerik.find('ul li').hide().filter('.' + tip).fadeIn(500);
             }
             return false;
         });
 
-        tabEtkinlikAlt.find('li').on('click', function () {
+        tabEtkinlikAlt.find('ul li').on('click', function () {
             if (!$(this).hasClass('aktif')) {
                 var tip = $(this).attr('datatype'),
-                    index = $(this).index();
-                tabEtkinlikAlt.find('li').removeClass('aktif');
+                    indis = $(this).index();
+
+                tabEtkinlikAlt.find('ul li').removeClass('aktif');
                 $(this).addClass('aktif');
-                tabEtkinlikBaslik.find('li').removeClass('aktif').eq(index).addClass('aktif');
-                tabEtkinlikIcerik.hide();
-                $("." + tip).fadeIn();
+                tabEtkinlikBaslik.find('ul li').removeClass('aktif');
+                tabEtkinlikBaslik.find('ul li').eq(indis).addClass('aktif');
+                tabEtkinlikIcerik.find('ul li').hide().filter('.' + tip).fadeIn(500);
             }
             return false;
         });
 
-    }
+    };
 
     //şehir fırsatları
     _3002Portal.sehirFirsatlari = function () {
 
-        var sehirLi         = $('.sehir-firsatlari ul li').length,
-            sehirWidth       = 344,
+        var sehirLi = $('.sehir-firsatlari ul li').length,
+            sehirWidth = 344,
             toplamSehirWidth = sehirWidth * sehirLi,
-            sehirDeger       = 0;
+            sehirDeger = 0;
 
         $('.sehir-firsatlari ul').css('width', toplamSehirWidth + 'px');
 
@@ -258,10 +260,10 @@ $(function () {
     //blog
     _3002Portal.blog = function () {
 
-        var blogLi          = $('.blog-icerik ul li').length,
-            blogWidth       = 323,
+        var blogLi = $('.blog-icerik ul li').length,
+            blogWidth = 323,
             toplamBlogWidth = blogWidth * blogLi,
-            blogDeger       = 0;
+            blogDeger = 0;
 
         $('.blog-icerik ul').css('width', toplamBlogWidth + 'px');
 
@@ -297,10 +299,10 @@ $(function () {
     //günlük burç
     _3002Portal.gunlukBurc = function () {
 
-        var burcLi          = $('.gunluk-burc ul li').length,
-            burcWidth       = 344,
+        var burcLi = $('.gunluk-burc ul li').length,
+            burcWidth = 344,
             toplamBurcWidth = burcWidth * burcLi,
-            burcDeger       = 0;
+            burcDeger = 0;
 
         $('.gunluk-burc ul').css('width', toplamBurcWidth + 'px');
 
@@ -337,14 +339,14 @@ $(function () {
     _3002Portal.slider = function () {
 
         var resim = $('ul.sliderResim li'),
-            link  = $('ul.sliderButton li');
+            link = $('ul.sliderButton li');
 
         resim.filter(':not(:first)').hide();
         link.filter(':first').addClass('aktif');
 
         link.on('mouseover', function () {
             var indis = $(this).index();
-            resim.stop().hide().eq(indis).fadeIn();
+            resim.stop().hide().eq(indis).fadeIn(500);
             link.removeClass('aktif').eq(indis).addClass('aktif');
         });
 
@@ -353,9 +355,9 @@ $(function () {
     //yorum
     _3002Portal.yorum = function () {
 
-        var yorumlarBaslik  = $('.yorumlarBaslik'),
-            yorumYaz        = $('.yorumYaz'),
-            yorumlarIcerik  = $('.yorumlarIcerik');
+        var yorumlarBaslik = $('.yorumlarBaslik'),
+            yorumYaz = $('.yorumYaz'),
+            yorumlarIcerik = $('.yorumlarIcerik');
 
         yorumlarBaslik.find('ul li').filter(':first').addClass('aktif');
         yorumYaz.hide();
@@ -382,8 +384,8 @@ $(function () {
     _3002Portal.uye = function () {
 
         var tabGirisKayit = $('.tabGirisKayit'),
-            giris         = $('.giris'),
-            kayit         = $('.kayit');
+            giris = $('.giris'),
+            kayit = $('.kayit');
 
         tabGirisKayit.find('ul li').filter(':first').addClass('aktif');
         giris.hide();
@@ -409,10 +411,10 @@ $(function () {
     //oyunlar
     _3002Portal.oyunlar = function () {
 
-        var oyunLi          = $('.oyunlar-icerik ul li').length,
-            oyunHeight      = 122,
+        var oyunLi = $('.oyunlar-icerik ul li').length,
+            oyunHeight = 122,
             toplamOyunWidth = oyunHeight * oyunLi,
-            oyunDeger       = 0;
+            oyunDeger = 0;
 
         $('.oyunlar-icerik ul').css('height', toplamOyunWidth + 'px');
 
@@ -444,6 +446,26 @@ $(function () {
         });
 
     };
+
+    //tab top listesi
+    _3002Portal.topList = function () {
+        var li = $('.tabTopList ul li');
+        var icerik = $('.topListIcerik');
+
+
+        li.removeClass('aktif');
+        li.filter(':first').addClass('aktif');
+        icerik.hide();
+        icerik.filter(':first').show();
+
+        li.on('click', function () {
+            li.removeClass('aktif');
+            $(this).addClass('aktif');
+            icerik.hide();
+            icerik.eq($(this).index()).fadeIn(500);
+            return false;
+        });
+    }
 
     //_3002Portal initialize
     _3002Portal.init();
@@ -527,4 +549,8 @@ $(function () {
 
     emlak(); //emlak fonksiyonu initialize
 
+});
+
+$(window).load(function () {
+    $('.fixed').load('fixed.html')
 });
