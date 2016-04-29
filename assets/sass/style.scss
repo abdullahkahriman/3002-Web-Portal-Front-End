@@ -2077,7 +2077,7 @@ $beyaz: #ffffff;
           height: 203px;
           background: $beyaz;
           padding: 24px;
-          span {
+          > span {
             color: #a3a3a3;
             font: 12px Arial;
             display: block;
@@ -2085,13 +2085,50 @@ $beyaz: #ffffff;
             line-height: 16px;
           }
           label {
-            margin-bottom: 15px;
+            //margin-bottom: 15px;
+            margin-bottom: 10px;
             display: block;
             font: bold 12px Arial;
             color: #525252;
             input {
-              margin-right: 9px;
-              vertical-align: middle;
+              //margin-right: 9px;
+              //vertical-align: middle;
+              position: absolute;
+              left: -9999px;
+            }
+            input:checked + .radio:before {
+              background: #f0ad4e;
+            }
+            .radio {
+              display: inline-block;
+              width: 14px;
+              height: 14px;
+              border-radius: 14px;
+              background: #ffffff;
+              border: 1px solid #ddd;
+              position: relative;
+              &:before {
+                content: '';
+                width: 8px;
+                height: 8px;
+                background: #ddd;
+                position: absolute;
+                -webkit-border-radius: 8px;
+                -moz-border-radius: 8px;
+                border-radius: 8px;
+                top: 3px;
+                left: 3px;
+                -webkit-transition: 300ms background;
+                -moz-transition: 300ms background;
+                -ms-transition: 300ms background;
+                -o-transition: 300ms background;
+                transition: 300ms background;
+              }
+            }
+            .text {
+              top: -3px;
+              margin-left: 7px;
+              position: relative;
             }
             &:hover {
               cursor: pointer;
@@ -2242,12 +2279,15 @@ $beyaz: #ffffff;
       .tabEtkinlikIcerik {
         height: 231px;
         background: $beyaz;
+        overflow: hidden;
         padding: 33px;
         ul {
+            overflow: hidden;
           li {
             float: left;
+            overflow: hidden;
             width: 178px;
-            margin-right: 22px;
+            margin-right: 15px;
             span {
               border: 3px solid #f2f2f2;
               overflow: hidden;
@@ -2289,8 +2329,8 @@ $beyaz: #ffffff;
                 background: #eeeeee;
               }
             }
-            &:last-child {
-              margin-right: 0;
+            .tab_konser {
+                display: none;
             }
           }
         }
