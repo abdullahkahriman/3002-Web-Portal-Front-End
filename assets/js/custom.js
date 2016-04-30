@@ -449,9 +449,8 @@ $(function () {
 
     //tab top listesi
     _3002Portal.topList = function () {
-        var li = $('.tabTopList ul li');
-        var icerik = $('.topListIcerik');
-
+        var li = $('.tabTopList ul li'),
+            icerik = $('.topListIcerik');
 
         li.removeClass('aktif');
         li.filter(':first').addClass('aktif');
@@ -459,10 +458,12 @@ $(function () {
         icerik.filter(':first').show();
 
         li.on('click', function () {
-            li.removeClass('aktif');
-            $(this).addClass('aktif');
-            icerik.hide();
-            icerik.eq($(this).index()).fadeIn(500);
+            if(!$(this).hasClass('aktif')){
+                li.removeClass('aktif');
+                $(this).addClass('aktif');
+                icerik.hide();
+                icerik.eq($(this).index()).fadeIn(500);
+            }
             return false;
         });
     }
